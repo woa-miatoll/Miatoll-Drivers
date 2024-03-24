@@ -14,7 +14,6 @@
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL_MINIMAL\UART" Name="RN9_uart.inf" ID="RN9_uart"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\Bluetooth" Name="RN9_btfmuart.inf" ID="RN9_btfmuart"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\Cellular" Name="RN9_ipa.inf" ID="RN9_ipa"/>
-            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\Graphics" Name="GenericDcsBacklight.inf" ID="GenericDcsBacklight"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\TouchTianma" Name="nt36xxx.inf" ID="nt36xxx"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\TouchHuaxing" Name="FocalTechTouch.inf" ID="FocalTechTouch"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\Wlan" Name="RN9_wlan.inf" ID="RN9_wlan"/>
@@ -78,6 +77,7 @@
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\USBFn" Name="QcUsbFnSsFilter7180.inf" ID="QcUsbFnSsFilter7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\USBFn" Name="ufnserialcomposite.inf" ID="ufnserialcomposite"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\USBHost" Name="QcXhciFilter7180.inf" ID="QcXhciFilter7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\GRAPHICS.SOC_QC7125.MIATOLL_DESKTOP" Name="RN9_dx.inf" ID="RN9_dx"/>
         </BaseDriverPackages>
     </Drivers>
 </FeatureManifest>

@@ -49,6 +49,11 @@
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE_MINIMAL\SOC\System" Name="qcsyscache7180.inf" ID="qcsyscache7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE_MINIMAL\SOC\Transports" Name="QcTftpKmdf.inf" ID="QcTftpKmdf"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE_MINIMAL\SOC\VoltageCurrentMonitoring" Name="qcadc7180.inf" ID="qcadc7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\Audio\ADCM" Name="qcadcm7180.inf" ID="qcadcm7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\Audio\Device" Name="qcauddev7180.inf" ID="qcauddev7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\Audio\RPC" Name="qcadsprpc7180.inf" ID="qcadsprpc7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\Audio\RPC" Name="qcadsprpcd7180.inf" ID="qcadsprpcd7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\Audio\Slimbus" Name="qcslimbus7180.inf" ID="qcslimbus7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\Battery" Name="qcfgbcl7180.inf" ID="qcfgbcl7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\Bluetooth\AddVSCRegistry" Name="qcbtaddvscregistry7180.inf" ID="qcbtaddvscregistry7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\Camera" Name="qccamjpege7180.inf" ID="qccamjpege7180"/>

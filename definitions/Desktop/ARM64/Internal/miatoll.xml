@@ -13,14 +13,22 @@
             <DriverPackageFile Path="$(mspackageroot)\components\ANYSOC\Support\Desktop\SUPPORT.DESKTOP.MOBILE_RIL\EMB" Name="emb.inf" ID="emb"/>
             <DriverPackageFile Path="$(mspackageroot)\components\ANYSOC\Support\Desktop\SUPPORT.DESKTOP.MOBILE_RIL\WindowsPhone" Name="WindowsPhone.inf" ID="WindowsPhone"/>
             <DriverPackageFile Path="$(mspackageroot)\components\ANYSOC\Support\Desktop\SUPPORT.DESKTOP.MOBILE_RIL_EXTRAS\EMBDeviceMetadata" Name="EMBDeviceMetadata.inf" ID="EMBDeviceMetadata"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL_MINIMAL\I2C" Name="RN9_i2c.inf" ID="RN9_i2c"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL_MINIMAL\SPI" Name="RN9_spi.inf" ID="RN9_spi"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL_MINIMAL\TrEE" Name="RN9_TrEE.inf" ID="RN9_TrEE"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL_MINIMAL\UART" Name="RN9_uart.inf" ID="RN9_uart"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\Audio\AudMiniport" Name="qcaudminiport_Base7180.inf" ID="qcaudminiport_Base7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\Audio\ListenSoundModel" Name="QCListenSM_swc7180.inf" ID="QCListenSM_swc7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\Audio\ListenSoundModel" Name="QCListenSM7180.inf" ID="QCListenSM7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\Bluetooth" Name="RN9_btfmuart.inf" ID="RN9_btfmuart"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\Cellular" Name="RN9_ipa.inf" ID="RN9_ipa"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\TouchTianma" Name="nt36xxx.inf" ID="nt36xxx"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\TouchHuaxing" Name="FocalTechTouch.inf" ID="FocalTechTouch"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Drivers\Wlan" Name="RN9_wlan.inf" ID="RN9_wlan"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Extensions\Audio\ACDB" Name="qcacsp_mtp7180.inf" ID="qcacsp_mtp7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Extensions\Audio\AudMiniport" Name="qcaudminiportMTP_Extension7180.inf" ID="qcaudminiportMTP_Extension7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Extensions\Audio\Device" Name="qcauddev_ext7180.inf" ID="qcauddev_ext7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Extensions\Audio\ListenSoundModel" Name="QCListenSM_swc_ext7180.inf" ID="QCListenSM_swc_ext7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Extensions\BatteryCurrentLimiter" Name="qcfgbclext7180.inf" ID="qcfgbclext7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Extensions\Bluetooth" Name="qcbtfmuart_ext_SwiftPairEnable7180.inf" ID="qcbtfmuart_ext_SwiftPairEnable7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL\Extensions\Bluetooth" Name="qcbtfmuart_ext7180.inf" ID="qcbtfmuart_ext7180"/>

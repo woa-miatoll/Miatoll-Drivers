@@ -1,44 +1,42 @@
 @echo off
 
+mkdir ..\..\Miatoll-Drivers-Release
+del ..\..\Miatoll-Drivers-Release\Miatoll-Drivers.zip
 
-      SET HOUR=%time:~0,2%
-      SET dtStamp9=%date:~-2%%date:~4,2%%date:~7,2%-0%time:~1,1%%time:~3,2%
-      SET dtStamp24=%date:~-2%%date:~4,2%%date:~7,2%-%time:~0,2%%time:~3,2%
+echo @echo off > ..\OnlineUpdater.cmd
+echo ^(NET FILE^|^|^(powershell -command Start-Process '%%0' -Verb runAs -ArgumentList '%%* '^&EXIT /B^)^)^>NUL 2^>^&1 >> ..\OnlineUpdater.cmd
+echo pushd "%%~dp0" ^&^& cd %%~dp0 >> ..\OnlineUpdater.cmd
+echo .\tools\DriverUpdater\%%PROCESSOR_ARCHITECTURE%%\DriverUpdater.exe -r . -d .\definitions\Desktop\ARM64\Internal\miatoll.xml >> ..\OnlineUpdater.cmd
+echo pause >> ..\OnlineUpdater.cmd
 
-      if "%HOUR:~0,1%" == " " (SET dtStamp=%dtStamp9%) else (SET dtStamp=%dtStamp24%)
+echo @echo off > ..\OfflineUpdater.cmd
+echo ^(NET FILE^|^|^(powershell -command Start-Process '%%0' -Verb runAs -ArgumentList '%%* '^&EXIT /B^)^)^>NUL 2^>^&1 >> ..\OfflineUpdater.cmd
+echo pushd "%%~dp0" ^&^& cd %%~dp0 >> ..\OfflineUpdater.cmd
+echo set /P DrivePath=Enter Drive letter ^^^(with the colon!^^^) of the connected device in mass storage mode ^^^(e.g. X:^^^): >> ..\OfflineUpdater.cmd
+echo .\tools\DriverUpdater\%%PROCESSOR_ARCHITECTURE%%\DriverUpdater.exe -r . -d .\definitions\Desktop\ARM64\Internal\miatoll.xml -p %%DrivePath%% >> ..\OfflineUpdater.cmd
+echo pause >> ..\OfflineUpdater.cmd
 
+echo apps\IPA > filelist_miatoll.txt
+echo components\ANYSOC\Support\Desktop\SUPPORT.DESKTOP.BASE >> filelist_miatoll.txt
+echo components\ANYSOC\Support\Desktop\SUPPORT.DESKTOP.MOBILE_COMPONENTS >> filelist_miatoll.txt
+echo components\ANYSOC\Support\Desktop\SUPPORT.DESKTOP.MOBILE_RIL >> filelist_miatoll.txt
+echo components\ANYSOC\Support\Desktop\SUPPORT.DESKTOP.MOBILE_RIL_EXTRAS >> filelist_miatoll.txt
+echo components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL >> filelist_miatoll.txt
+echo components\QC7125\Device\Miatoll\DEVICE.SOC_QC7125.MIATOLL_MINIMAL >> filelist_miatoll.txt
+echo components\QC7125\Device\Miatoll\GRAPHICS.SOC_QC7125.MIATOLL_DESKTOP >> filelist_miatoll.txt
+echo components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE >> filelist_miatoll.txt
+echo components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE_MINIMAL >> filelist_miatoll.txt
+echo definitions\Desktop\ARM64\Internal\miatoll.xml >> filelist_miatoll.txt
+echo definitions\Desktop\ARM64\PE\miatoll.xml >> filelist_miatoll.txt
+echo tools\DriverUpdater >> filelist_miatoll.txt
+echo OfflineUpdater.cmd >> filelist_miatoll.txt
+echo OnlineUpdater.cmd >> filelist_miatoll.txt
+echo README.md >> filelist_miatoll.txt
 
-title [220X.%dtStamp%.prerelease] [Build preparation] [Packing Binaries]
-REM rmdir /Q /S ..\..\miatoll-Drivers-Release
-REM mkdir ..\..\miatoll-Drivers-Release
+cd ..
+"%ProgramFiles%\7-zip\7z.exe" a -tzip ..\Miatoll-Drivers-Release\Miatoll-Drivers.zip @tools\filelist_miatoll.txt -scsWIN
+cd tools
 
-mkdir miatoll-Drivers-Full
-mkdir miatoll-Drivers-Full\components
-mkdir miatoll-Drivers-Full\definitions
-xcopy /cheriky ..\components\QC7125 miatoll-Drivers-Full\components\QC7125
-xcopy /cheriky ..\components\ANYSOC miatoll-Drivers-Full\components\ANYSOC
-xcopy /cheriky ..\definitions\Desktop miatoll-Drivers-Full\definitions\Desktop
-
-copy .\DriverUpdater.ARM64.exe miatoll-Drivers-Full
-copy .\DriverUpdater.AMD64.exe miatoll-Drivers-Full
-copy .\DriverUpdater.X86.exe miatoll-Drivers-Full
-
-echo @echo off > miatoll-Drivers-Full\OnlineUpdater.cmd
-echo ^(NET FILE^|^|^(powershell -command Start-Process '%%0' -Verb runAs -ArgumentList '%%* '^&EXIT /B^)^)^>NUL 2^>^&1 >> miatoll-Drivers-Full\OnlineUpdater.cmd
-echo pushd "%%~dp0" ^&^& cd %%~dp0 >> miatoll-Drivers-Full\OnlineUpdater.cmd
-echo DriverUpdater.%%PROCESSOR_ARCHITECTURE%%.exe -r . -d .\definitions\Desktop\ARM64\Internal\miatoll.xml >> miatoll-Drivers-Full\OnlineUpdater.cmd
-echo pause >> miatoll-Drivers-Full\OnlineUpdater.cmd
-
-echo @echo off > miatoll-Drivers-Full\OfflineUpdater.cmd
-echo ^(NET FILE^|^|^(powershell -command Start-Process '%%0' -Verb runAs -ArgumentList '%%* '^&EXIT /B^)^)^>NUL 2^>^&1 >> miatoll-Drivers-Full\OfflineUpdater.cmd
-echo pushd "%%~dp0" ^&^& cd %%~dp0 >> miatoll-Drivers-Full\OfflineUpdater.cmd
-echo set /P DrivePath=Enter Drive letter ^^^(with the colon!^^^) of the connected device in mass storage mode ^^^(e.g. D:^^^): >> miatoll-Drivers-Full\OfflineUpdater.cmd
-echo DriverUpdater.%%PROCESSOR_ARCHITECTURE%%.exe -r . -d .\definitions\Desktop\ARM64\Internal\miatoll.xml -p %%DrivePath%% >> miatoll-Drivers-Full\OfflineUpdater.cmd
-echo pause >> miatoll-Drivers-Full\OfflineUpdater.cmd
-
-"%ProgramFiles%\7-zip\7z.exe" a -tzip -r ..\..\miatoll-Drivers-Release\miatoll-Drivers-Full.zip miatoll-Drivers-Full\*
-
-REM move miatoll-Drivers-Full\components\QC7125 ..\components\QC7125
-REM move miatoll-Drivers-Full\definitions\Desktop ..\definitions
-
-rmdir /Q /S miatoll-Drivers-Full
+del ..\OfflineUpdater.cmd
+del ..\OnlineUpdater.cmd
+del filelist_miatoll.txt

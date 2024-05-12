@@ -1,4 +1,4 @@
-VERSION:841570078
+VERSION:841057203
 
 5,IIII,COEX_MWS_ANT_DIVERSITY: chnmsk completed Rx:0x%x, Tx:0x%x, Cal:%d, ReqId:%d 
 4,,COEX_MWS_ANT_DIVERSITY: CHMMGR_TX_CHM_CHANGED 
@@ -2431,14 +2431,14 @@ VERSION:841570078
 2156,I,NAN20_utils: 2nd avail attribute received with mapId:%d 
 2155,,NAN20_utils: 1st avail attribute decode failed 
 2154,I,NAN20_utils: 1st avail attribute received with mapId:%d 
-2153,I,NAN_20_ReceiveNMF_Parse_And_Validate failed: status: %d 
+2153,I,NAN_20_ReceiveNMF_Parse_And_Validate: Input Length(%d) validation failed 
+2152,I,NAN_20_ReceiveNMF_Parse_And_Validate failed: status: %d 
 2129,,NAN20_UTILS: NMF RANGING TERMINATE RECEIVED 
 2128,,NAN20_UTILS: NMF NAN_SCHEDULE_REQUEST RECEIVED 
 2127,,NAN20_UTILS: NMF NAN_SCHEDULE_RESPONSE RECEIVED 
 2126,,NAN20_UTILS: NMF NAN_SCHEDULE_CONFIRM RECEIVED 
 2125,,NAN20_UTILS: NMF NAN_RANGING_REPORT RECEIVED 
 2124,,NAN20_UTILS: NMF NAN UPDATE NOTIFICATION RECEIVED 
-2152,I,NAN_20_ReceiveNMF_Parse_And_Validate: Input Length(%d) validation failed 
 2151,II,NAN_20_ReceiveNMF_Parse_And_Validate: Received NMF with oui_subtype: %d framelen:%d 
 2150,II,NAN20_UTILS: NMF attrId%x attrLen %x  
 2149,,get_ndp_ext_attr failed 

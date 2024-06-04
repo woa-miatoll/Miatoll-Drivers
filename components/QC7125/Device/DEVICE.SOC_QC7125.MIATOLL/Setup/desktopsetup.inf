@@ -1,0 +1,38 @@
+;
+; desktopsetup.inf
+;
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = SYSTEM
+ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider    = %IHV%
+DriverVer   = 12/09/2023,1.0.0.4
+CatalogFile = desktopsetup.cat
+PnpLockdown = 1
+
+[DestinationDirs]
+; 10 = Windows
+; 24 = Root
+WindowsPanther.Files          = 10, Panther
+
+[SourceDisksNames]
+0 = %DiskId1%
+
+[SourceDisksFiles]
+Unattend.xml                  = 0,,
+
+;*****************************************
+; desktopsetup  Install Section
+;*****************************************
+
+[DefaultInstall.NTARM64]
+CopyFiles = WindowsPanther.Files
+
+; Windows/Panther
+[WindowsPanther.Files]
+Unattend.xml
+
+[Strings]
+IHV     = "Xiaomi"
+DiskId1 = "Desktop Setup Installation Disk #1"

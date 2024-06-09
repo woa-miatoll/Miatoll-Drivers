@@ -20,6 +20,7 @@
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\Audio\AudMiniport" Name="qcaudminiport_Base7180.inf" ID="qcaudminiport_Base7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\Audio\ListenSoundModel" Name="QCListenSM_swc7180.inf" ID="QCListenSM_swc7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\Audio\ListenSoundModel" Name="QCListenSM7180.inf" ID="QCListenSM7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\Battery" Name="PMFG.inf" ID="PMFG"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\Bluetooth" Name="RN9_btfmuart.inf" ID="RN9_btfmuart"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\Cellular" Name="RN9_ipa.inf" ID="RN9_ipa"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\TouchSelector" Name="TouchscreenSelector.inf" ID="TouchscreenSelector"/>

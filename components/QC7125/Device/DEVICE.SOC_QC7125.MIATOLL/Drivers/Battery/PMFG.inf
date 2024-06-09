@@ -1,0 +1,74 @@
+ ;/*++
+;
+;Copyright (c) Microsoft Corporation All rights Reserved
+;
+;Module Name:
+;
+;    PMFG.inf
+;
+;Abstract:
+;
+;    INF file for installing Surface Battery Miniclass driver.
+;
+;--*/
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Battery
+ClassGuid={72631e54-78a4-11d0-bcf7-00aa00b7b32a}
+Provider=%ProviderName%
+DriverVer = 06/09/2024,22.2.1.468
+CatalogFile=PMFG.cat
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+PMFG.sys  = 1,,
+
+;*****************************************
+; Surface Battery Mini Class Install Section
+;*****************************************
+
+[Manufacturer]
+%ProviderName%=Standard,NTARM64
+
+[Standard.NTARM64]
+%PMFG.DeviceDesc% = PMFG_Device, ACPI\PMFG
+
+[PMFG_Device.NT]
+CopyFiles=PMFG_Device_Drivers
+Include=battery.inf
+Needs=Battery_Inst
+
+[PMFG_Device_Drivers]
+PMFG.sys
+
+;-------------- Service installation
+
+[PMFG_Device.NT.Services]
+AddService = PMFG,%SPSVCINST_ASSOCSERVICE%,PMFG_Service_Inst
+
+; -------------- PMFG driver install sections
+
+[PMFG_Service_Inst]
+DisplayName    = %PMFG.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %13%\PMFG.sys
+
+;*****************************************
+; Literals
+;*****************************************
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ProviderName = "Nikroks"
+DiskId1 = "PMIC Fuel Gauge Mini Class Installation Disk"
+PMFG.DeviceDesc = "PMIC Fuel Gauge"
+PMFG.SVCDESC = "PMIC Fuel Gauge"

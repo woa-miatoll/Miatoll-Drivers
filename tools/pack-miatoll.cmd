@@ -12,8 +12,15 @@ echo pause >> ..\OnlineUpdater.cmd
 echo @echo off > ..\OfflineUpdater.cmd
 echo ^(NET FILE^|^|^(powershell -command Start-Process '%%0' -Verb runAs -ArgumentList '%%* '^&EXIT /B^)^)^>NUL 2^>^&1 >> ..\OfflineUpdater.cmd
 echo pushd "%%~dp0" ^&^& cd %%~dp0 >> ..\OfflineUpdater.cmd
-echo set /P DrivePath=Enter Drive letter ^^^(with the colon!^^^) of the connected device in mass storage mode ^^^(e.g. X:^^^): >> ..\OfflineUpdater.cmd
-echo if not "%%DrivePath:~1,1%%"==":" set DrivePath=%%DrivePath%%: >> ..\OfflineUpdater.cmd
+echo for /f %%%%a in ('wmic logicaldisk where "VolumeName='WINMIATOLL'" get deviceid^^^|find ":"')do set "DrivePath=%%%%a" >> ..\OfflineUpdater.cmd
+echo if not [%%DrivePath%%]==[] goto start >> ..\OfflineUpdater.cmd
+echo if [%%DrivePath%%]==[] echo Automatic WINMIATOLL detection failed! Enter Drive Letter manually. >> ..\OfflineUpdater.cmd
+echo :sdisk >> ..\OfflineUpdater.cmd
+echo set /P DrivePath=Enter Drive letter of WINMIATOLL ^^^(should be X:^^^): >> ..\OfflineUpdater.cmd
+echo if [%%DrivePath%%]==[] goto sdisk >> ..\OfflineUpdater.cmd
+echo if not "%%DrivePath:~1,1%%"==":" set DrivePath=%%DrivePath%%:>> ..\OfflineUpdater.cmd
+echo :start >> ..\OfflineUpdater.cmd
+echo if not exist "%%DrivePath%%\Windows\" echo Error! Selected Disk "%%DrivePath%%" doesn't have any Windows installation. ^& pause ^& exit >> ..\OfflineUpdater.cmd
 echo .\tools\DriverUpdater\%%PROCESSOR_ARCHITECTURE%%\DriverUpdater.exe -r . -d .\definitions\Desktop\ARM64\Internal\miatoll.xml -p %%DrivePath%% >> ..\OfflineUpdater.cmd
 echo pause >> ..\OfflineUpdater.cmd
 

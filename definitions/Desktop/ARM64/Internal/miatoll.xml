@@ -23,6 +23,7 @@
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\Battery" Name="PMFG.inf" ID="PMFG"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\Bluetooth" Name="RN9_btfmuart.inf" ID="RN9_btfmuart"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\Cellular" Name="RN9_ipa.inf" ID="RN9_ipa"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\Sensors" Name="qcSensors7180.inf" ID="qcSensors7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\TouchSelector" Name="TouchscreenSelector.inf" ID="TouchscreenSelector"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\TouchTianma" Name="nt36xxx.inf" ID="nt36xxx"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Drivers\TouchHuaxing" Name="FocalTechTouch.inf" ID="FocalTechTouch"/>
@@ -36,6 +37,7 @@
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Extensions\Bluetooth" Name="qcbtfmuart_ext7180.inf" ID="qcbtfmuart_ext7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Extensions\HexagonLoader" Name="RN9_pilext.inf" ID="RN9_pilext"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Extensions\SAR" Name="RN9_sar.inf" ID="RN9_sar"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Extensions\Sensors" Name="qcSensorsConfig7180.inf" ID="qcSensorsConfig7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Extensions\Subsystems" Name="mcfg_subsys_ext7180.inf" ID="mcfg_subsys_ext7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Extensions\Subsystems" Name="qcsubsys_ext_adsp7180.inf" ID="qcsubsys_ext_adsp7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Extensions\Subsystems" Name="qcsubsys_ext_cdsp7180.inf" ID="qcsubsys_ext_cdsp7180"/>

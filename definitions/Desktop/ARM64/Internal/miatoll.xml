@@ -95,6 +95,7 @@
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\Shutdown" Name="qcshutdownsvc.inf" ID="qcshutdownsvc"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\Subsystems" Name="qcpdsr.inf" ID="qcpdsr"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\Subsystems" Name="qcsubsys7180.inf" ID="qcsubsys7180"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\USB" Name="qcursext.inf" ID="qcursext"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\USB" Name="qcusbcucsi7180.inf" ID="qcusbcucsi7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\USBFn" Name="QcUsbFnSsFilter7180.inf" ID="QcUsbFnSsFilter7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE\Source\Drivers\USBFn" Name="ufnserialcomposite.inf" ID="ufnserialcomposite"/>

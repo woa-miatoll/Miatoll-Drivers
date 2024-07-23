@@ -39,12 +39,12 @@
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Extensions\Subsystems" Name="qcsubsys_ext_adsp7180.inf" ID="qcsubsys_ext_adsp7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Extensions\Subsystems" Name="qcsubsys_ext_cdsp7180.inf" ID="qcsubsys_ext_cdsp7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL\Extensions\Subsystems" Name="qcsubsys_ext_mpss7180.inf" ID="qcsubsys_ext_mpss7180"/>
-            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\OEM\OEM.SOC_QC8150.MIATOLL\Drivers\Touch\Selector" Name="TouchscreenSelector.inf" ID="TouchscreenSelector"/>
-            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\OEM\OEM.SOC_QC8150.MIATOLL\Drivers\Touch\Tianma" Name="nt36xxx.inf" ID="nt36xxx"/>
-            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\OEM\OEM.SOC_QC8150.MIATOLL\Drivers\Touch\Huaxing" Name="FocalTechTouch.inf" ID="FocalTechTouch"/>
-            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\OEM\OEM.SOC_QC8150.MIATOLL\Settings" Name="RN9_DeviceInfo.inf" ID="RN9_DeviceInfo"/>
-            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\OEM\OEM.SOC_QC8150.MIATOLL\Setup\DesktopSetup" Name="desktopsetup.inf" ID="desktopsetup"/>
-            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\OEM\OEM.SOC_QC8150.MIATOLL\Setup\BypassNRO" Name="BypassNRO.inf" ID="BypassNRO"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\OEM\OEM.SOC_QC7125.MIATOLL\Drivers\Touch\Selector" Name="TouchscreenSelector.inf" ID="TouchscreenSelector"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\OEM\OEM.SOC_QC7125.MIATOLL\Drivers\Touch\Tianma" Name="nt36xxx.inf" ID="nt36xxx"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\OEM\OEM.SOC_QC7125.MIATOLL\Drivers\Touch\Huaxing" Name="FocalTechTouch.inf" ID="FocalTechTouch"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\OEM\OEM.SOC_QC7125.MIATOLL\Settings" Name="RN9_DeviceInfo.inf" ID="RN9_DeviceInfo"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\OEM\OEM.SOC_QC7125.MIATOLL\Setup\DesktopSetup" Name="desktopsetup.inf" ID="desktopsetup"/>
+            <DriverPackageFile Path="$(mspackageroot)\components\QC7125\OEM\OEM.SOC_QC7125.MIATOLL\Setup\BypassNRO" Name="BypassNRO.inf" ID="BypassNRO"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE_MINIMAL\HALs" Name="HalExtQCWdogTimer7180.inf" ID="HalExtQCWdogTimer7180"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE_MINIMAL\SOC\ACPI" Name="qcabd.inf" ID="qcabd"/>
             <DriverPackageFile Path="$(mspackageroot)\components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE_MINIMAL\SOC\Buses" Name="qcglink7180.inf" ID="qcglink7180"/>

@@ -1,7 +1,7 @@
 @echo off
 
 mkdir ..\..\Miatoll-Drivers-Release
-del ..\..\Miatoll-Drivers-Release\Miatoll-Drivers.zip
+del ..\..\Miatoll-Drivers-Release\Miatoll-Drivers.7z
 
 echo @echo off > ..\OnlineUpdater.cmd
 echo ^(NET FILE^|^|^(powershell -command Start-Process '%%0' -Verb runAs -ArgumentList '%%* '^&EXIT /B^)^)^>NUL 2^>^&1 >> ..\OnlineUpdater.cmd
@@ -41,7 +41,7 @@ echo OnlineUpdater.cmd >> filelist_miatoll.txt
 echo README.md >> filelist_miatoll.txt
 
 cd ..
-"%ProgramFiles%\7-zip\7z.exe" a -tzip ..\Miatoll-Drivers-Release\Miatoll-Drivers.zip @tools\filelist_miatoll.txt -scsWIN
+"tools\7z.exe" a -t7z ..\Miatoll-Drivers-Release\Miatoll-Drivers.7z @tools\filelist_miatoll.txt -scsWIN
 cd tools
 
 del ..\OfflineUpdater.cmd

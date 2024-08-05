@@ -31,6 +31,7 @@ echo components\ANYSOC\Support\Desktop\SUPPORT.DESKTOP.MOBILE_RIL >> filelist_mi
 echo components\ANYSOC\Support\Desktop\SUPPORT.DESKTOP.MOBILE_RIL_EXTRAS >> filelist_miatoll.txt
 echo components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL >> filelist_miatoll.txt
 echo components\QC7125\Device\DEVICE.SOC_QC7125.MIATOLL_MINIMAL >> filelist_miatoll.txt
+echo components\QC7125\OEM\OEM.SOC_QC7125.MIATOLL >> filelist_miatoll.txt
 echo components\QC7125\GRAPHICS\GRAPHICS.SOC_QC7125.MIATOLL_DESKTOP >> filelist_miatoll.txt
 echo components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE >> filelist_miatoll.txt
 echo components\QC7125\Platform\PLATFORM.SOC_QC7125.BASE_MINIMAL >> filelist_miatoll.txt
